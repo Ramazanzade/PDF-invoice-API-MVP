@@ -1,0 +1,51 @@
+{
+  "language": "uk",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "Баку, вул. Нізамі, 12",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "Баку, вул. 28 Травня, 45",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "Розробка веб-сайту",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "Послуга хостингу (1 рік)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "Технічна підтримка (3 місяці)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "Оплата має бути здійснена банківським переказом протягом 7 робочих днів.",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "Рахунок-фактура",
+    "from": "Продавець",
+    "bill_to": "Покупець",
+    "tax": "ПДВ",
+    "thank_you": "Дякуємо за співпрацю!",
+    "rayon": "Ленкорань",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "Відповідальна особа: Нізам Рамазанзаде"
+  }
+}

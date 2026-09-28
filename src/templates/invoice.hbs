@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="{{language}}" dir="{{#if isRTL}}rtl{{else}}ltr{{/if}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{t.invoice}} {{invoice_number}}</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: {{#if isRTL}}'Noto Sans Arabic',{{/if}} 'Noto Sans', sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.5;
+      padding: 40px;
+    }
+
+    .invoice-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .logo {
+      max-height: 60px;
+      max-width: 180px;
+    }
+
+    .invoice-title {
+      text-align: {{#if isRTL}}left{{else}}right{{/if}};
+    }
+
+    .invoice-title h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .invoice-meta {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .invoice-meta span {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Parties */
+    .parties {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .party {
+      flex: 1;
+    }
+
+    .party-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .party-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .party-details {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+    }
+
+    thead {
+      background: #f9fafb;
+    }
+
+    th {
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #6b7280;
+      text-align: {{#if isRTL}}right{{else}}left{{/if}};
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th.right {
+      text-align: {{#if isRTL}}left{{else}}right{{/if}};
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #f3f4f6;
+      vertical-align: top;
+    }
+
+    td.right {
+      text-align: {{#if isRTL}}left{{else}}right{{/if}};
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Totals */
+    .totals {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 40px;
+    }
+
+    .totals-table {
+      width: 280px;
+    }
+
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+
+    .totals-row.subtotal {
+      color: #4b5563;
+    }
+
+    .totals-row.tax {
+      color: #4b5563;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+    }
+
+    .totals-row.total {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      padding-top: 8px;
+    }
+
+    /* Notes */
+    .notes {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .notes-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6b7280;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .notes-content {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice-container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-section">
+        {{#if logo_url}}
+          <img src="{{logo_url}}" alt="Logo" class="logo" />
+        {{else}}
+          <div style="font-size: 20px; font-weight: 700; color: #111827;">
+            {{seller.name}}
+          </div>
+        {{/if}}
+      </div>
+
+      <div class="invoice-title">
+        <h1>{{t.invoice}}</h1>
+        <div class="invoice-meta">
+          <span><strong>{{t.invoice_number}}:</strong> {{invoice_number}}</span>
+          <span><strong>{{t.date}}:</strong> {{issue_date}}</span>
+          {{#if due_date}}
+            <span><strong>{{t.due_date}}:</strong> {{due_date}}</span>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Parties -->
+    <div class="parties">
+      <div class="party">
+        <div class="party-label">{{t.from}}</div>
+        <div class="party-name">{{seller.name}}</div>
+        <div class="party-details">
+          {{#if seller.address}}{{seller.address}}<br>{{/if}}
+          {{#if seller.email}}{{seller.email}}<br>{{/if}}
+          {{#if seller.phone}}{{seller.phone}}<br>{{/if}}
+          {{#if seller.tax_id}}{{seller.tax_id}}{{/if}}
+        </div>
+      </div>
+
+      <div class="party">
+        <div class="party-label">{{t.bill_to}}</div>
+        <div class="party-name">{{buyer.name}}</div>
+        <div class="party-details">
+          {{#if buyer.address}}{{buyer.address}}<br>{{/if}}
+          {{#if buyer.email}}{{buyer.email}}<br>{{/if}}
+          {{#if buyer.phone}}{{buyer.phone}}<br>{{/if}}
+          {{#if buyer.tax_id}}{{buyer.tax_id}}{{/if}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Items Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>{{t.description}}</th>
+          <th class="right">{{t.quantity}}</th>
+          <th class="right">{{t.unit_price}}</th>
+          <th class="right">{{t.amount}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each items}}
+          <tr>
+            <td>{{this.description}}</td>
+            <td class="right">{{this.quantity}}</td>
+            <td class="right">{{this.unit_price_formatted}}</td>
+            <td class="right">{{this.amount_formatted}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <!-- Totals -->
+    <div class="totals">
+      <div class="totals-table">
+        <div class="totals-row subtotal">
+          <span>{{t.subtotal}}</span>
+          <span>{{subtotal_formatted}}</span>
+        </div>
+
+        {{#if tax_amount}}
+          <div class="totals-row tax">
+            <span>{{t.tax}} ({{tax_rate}}%)</span>
+            <span>{{tax_amount_formatted}}</span>
+          </div>
+        {{/if}}
+
+        <div class="totals-row total">
+          <span>{{t.total}}</span>
+          <span>{{total_formatted}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    {{#if notes}}
+      <div class="notes">
+        <div class="notes-label">{{t.notes}}</div>
+        <div class="notes-content">{{notes}}</div>
+      </div>
+    {{/if}}
+<!-- Extra custom labels -->
+    {{#if extraLabels.length}}
+      <div class="notes" style="margin-top: 24px;">
+        <div class="notes-label">Əlavə məlumat</div>
+        <div class="notes-content">
+          {{#each extraLabels}}
+            <div style="margin-bottom: 6px;">
+              <strong>{{this.key}}:</strong> {{this.value}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
+    <!-- Footer -->
+    <div class="footer">
+      {{t.thank_you}}
+    </div>
+
+  </div>
+</body>
+</html>

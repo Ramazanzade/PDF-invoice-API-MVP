@@ -1,0 +1,51 @@
+{
+  "language": "vi",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "Baku, đường Nizami 12",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "Baku, đường 28 Tháng 5 45",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "Phát triển website",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "Dịch vụ lưu trữ (1 năm)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "Hỗ trợ kỹ thuật (3 tháng)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "Thanh toán phải được thực hiện bằng chuyển khoản ngân hàng trong vòng 7 ngày làm việc.",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "Hóa đơn",
+    "from": "Người bán",
+    "bill_to": "Người mua",
+    "tax": "Thuế VAT",
+    "thank_you": "Cảm ơn quý khách đã hợp tác!",
+    "rayon": "Lankaran",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "Người phụ trách: Nizam Ramazanzade"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "language": "pl",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "Baku, ul. Nizami 12",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "Baku, ul. 28 Maja 45",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "Tworzenie strony internetowej",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "Usługa hostingowa (1 rok)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "Wsparcie techniczne (3 miesiące)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "Płatność należy zrealizować przelewem bankowym w ciągu 7 dni roboczych.",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "Faktura",
+    "from": "Sprzedawca",
+    "bill_to": "Nabywca",
+    "tax": "VAT",
+    "thank_you": "Dziękujemy za współpracę!",
+    "rayon": "Lankaran",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "Osoba odpowiedzialna: Nizam Ramazanzade"
+  }
+}

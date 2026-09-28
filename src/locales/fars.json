@@ -1,0 +1,51 @@
+{
+  "language": "fa",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "شهر باکو، خیابان نظامی ۱۲",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "شهر باکو، خیابان ۲۸ می ۴۵",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "طراحی و توسعه وب‌سایت",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "خدمات میزبانی (۱ سال)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "پشتیبانی فنی (۳ ماه)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "پرداخت باید ظرف ۷ روز کاری از طریق انتقال بانکی انجام شود.",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "صورتحساب",
+    "from": "فروشنده",
+    "bill_to": "خریدار",
+    "tax": "مالیات بر ارزش افزوده",
+    "thank_you": "از همکاری شما سپاسگزاریم!",
+    "rayon": "لنکران",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "شخص مسئول: نظام رمضان‌زاده"
+  }
+}

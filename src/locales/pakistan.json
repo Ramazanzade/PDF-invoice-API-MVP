@@ -1,0 +1,51 @@
+{
+  "language": "ur",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "باکو شہر، نظامی اسٹریٹ 12",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "باکو شہر، 28 مئی اسٹریٹ 45",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "ویب سائٹ کی تیاری",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "ہوسٹنگ سروس (1 سال)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "تکنیکی معاونت (3 ماہ)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "ادائیگی 7 کاروباری دنوں کے اندر بینک ٹرانسفر کے ذریعے کی جانی چاہیے۔",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "انوائس",
+    "from": "فروخت کنندہ",
+    "bill_to": "خریدار",
+    "tax": "ویلیو ایڈڈ ٹیکس",
+    "thank_you": "آپ کے تعاون کا شکریہ!",
+    "rayon": "لنکران",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "ذمہ دار شخص: نظام رمضان زادہ"
+  }
+}

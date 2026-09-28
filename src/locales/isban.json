@@ -1,0 +1,51 @@
+{
+  "language": "es",
+  "currency": "AZN",
+  "invoice_number": "INV-2026-001",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-05",
+  "seller": {
+    "name": "ABC MMC",
+    "address": "Bakú, calle Nizami 12",
+    "email": "info@abc.az",
+    "phone": "+994 50 123 45 67",
+    "tax_id": "1234567891"
+  },
+  "buyer": {
+    "name": "XYZ MMC",
+    "address": "Bakú, calle 28 de Mayo 45",
+    "email": "billing@xyz.az",
+    "phone": "+994 55 987 65 43",
+    "tax_id": "9876543210"
+  },
+  "items": [
+    {
+      "description": "Desarrollo de sitio web",
+      "quantity": 1,
+      "unit_price": 1200
+    },
+    {
+      "description": "Servicio de alojamiento web (1 año)",
+      "quantity": 1,
+      "unit_price": 150
+    },
+    {
+      "description": "Soporte técnico (3 meses)",
+      "quantity": 1,
+      "unit_price": 300
+    }
+  ],
+  "tax_rate": 18,
+  "notes": "El pago debe realizarse mediante transferencia bancaria en un plazo de 7 días laborables.",
+  "logo_url": "https://example.com/logo.png",
+  "labels": {
+    "invoice": "Factura",
+    "from": "Vendedor",
+    "bill_to": "Comprador",
+    "tax": "IVA",
+    "thank_you": "¡Gracias por su colaboración!",
+    "rayon": "Lankarán",
+    "müqavilə_no": "45/2026",
+    "məsul_şəxs": "Persona responsable: Nizam Ramazanzade"
+  }
+}
