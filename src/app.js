@@ -14,9 +14,6 @@ await app.register(cors, {
 
 // Routes
 await app.register(invoiceRoutes);
-await app.register(healthRoutes);
-// Health
-app.get('/v1/health', async () => ({ status: 'ok' }));
 
 app.get('/', async () => {
   return {
