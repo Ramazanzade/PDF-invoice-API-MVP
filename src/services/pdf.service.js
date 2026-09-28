@@ -21,7 +21,7 @@ function getBrowser() {
       })
       .then((b) => {
         b.on('disconnected', () => {
-          browserPromise = null; 
+          browserPromise = null;
         });
         return b;
       })
@@ -53,7 +53,7 @@ function acquire() {
 
 function release() {
   const next = queue.shift();
-  if (next) next()
+  if (next) next();
   else active--;
 }
 
