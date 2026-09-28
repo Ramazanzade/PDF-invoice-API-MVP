@@ -19,9 +19,12 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
-process.on('SIGTERM', async () => {
-  await closeBrowser();
-  process.exit(0);
-});
+for (const sig of ['SIGTERM', 'SIGINT']) {
+  process.on(sig, async () => {
+    await app.close();
+    await closeBrowser();
+    process.exit(0);
+  });
+}
 
 start();
