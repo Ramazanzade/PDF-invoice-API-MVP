@@ -4,7 +4,7 @@ import { closeBrowser } from './services/pdf.service.js';
 
 const start = async () => {
   try {
-    await app.listen({ port: config.port, host: '0.0.0.0' });
+    await app.listen({ port: Number(process.env.PORT) || 3000, host: '0.0.0.0'  });
     console.log(`🚀 Invoice API running on http://localhost:${config.port}`);
   } catch (err) {
     app.log.error(err);
