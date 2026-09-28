@@ -19,7 +19,6 @@ async function getBrowser() {
         '--disable-dev-shm-usage',
         '--disable-gpu',
       ],
-      // Windows-da bəzən lazım olur
       ignoreDefaultArgs: ['--disable-extensions'],
     });
   }

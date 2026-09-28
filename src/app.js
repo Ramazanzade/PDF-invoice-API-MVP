@@ -2,6 +2,7 @@ import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import invoiceRoutes from './routes/invoices.route.js';
 import { getTranslations, getSupportedLanguages, isRTL } from './services/i18n.service.js';
+import healthRoutes from './routes/health.js';
 
 const app = Fastify({
   logger: true,
@@ -13,15 +14,9 @@ await app.register(cors, {
 
 // Routes
 await app.register(invoiceRoutes);
-
+await app.register(healthRoutes);
 // Health
-app.get('/health', async () => {
-  return {
-    status: 'ok',
-    service: 'invoice-api',
-    timestamp: new Date().toISOString(),
-  };
-});
+app.get('/v1/health', async () => ({ status: 'ok' }));
 
 app.get('/', async () => {
   return {
