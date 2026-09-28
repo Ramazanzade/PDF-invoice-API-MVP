@@ -11,7 +11,7 @@ let browser = null;
 async function getBrowser() {
   if (!browser) {
     browser = await chromium.launch({
-      channel: 'msedge',
+     // channel: 'msedge',
       headless: true,
       args: [
         '--no-sandbox',

@@ -1,0 +1,1 @@
+{"success":false,"error":"Failed to generate PDF","message":"browserType.launch: Chromium distribution 'msedge' is not found at /opt/microsoft/msedge/msedge\nRun \"npx playwright install msedge\""}
