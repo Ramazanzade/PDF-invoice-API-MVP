@@ -14,7 +14,7 @@ await app.register(cors, {
 
 // Routes
 await app.register(invoiceRoutes);
-
+await app.register(healthRoutes);   
 app.get('/', async () => {
   return {
     message: 'PDF Invoice Generator API',
