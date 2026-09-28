@@ -12,7 +12,6 @@ await app.register(cors, {
   origin: true,
 });
 
-// Routes
 await app.register(invoiceRoutes);
 await app.register(healthRoutes);   
 app.get('/', async () => {
@@ -22,7 +21,6 @@ app.get('/', async () => {
   };
 });
 
-// Languages
 app.get('/v1/languages', async () => {
   return {
     supported: getSupportedLanguages(),
