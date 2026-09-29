@@ -24,14 +24,21 @@ export async function authMiddleware(request, reply) {
   }
 
   if (result.exceeded) {
-  const nextPlan = Object.entries(PLANS).find(([, p]) => p.limit > result.limit)?.[0];
-  return reply.status(429).send({
-    success: false,
-    error: 'Quota exceeded',
-    message: nextPlan
-      ? `Monthly limit reached for the "${result.plan}" plan. Upgrade to "${nextPlan}" ($${PLANS[nextPlan].price}/mo) — contact [ramazanov570633@gmail.com].`
-      : `Monthly limit reached for the "${result.plan}" plan. Contact [ramazanov570633@gmail.com] for a custom plan.`,
-  });
+ const nextPlanEntry = Object.entries(PLANS).find(
+      ([, p]) => p.limit > result.limit
+    );
+    const nextPlan = nextPlanEntry?.[0];
+    const contact = '[ramazanov570633@gmail.com]';  
+
+    const message = nextPlan
+      ? `Monthly limit reached for the "${result.plan}" plan (${result.limit} invoices). Upgrade to "${nextPlan}" ($${PLANS[nextPlan].price}/mo) — contact ${contact}`
+      : `Monthly limit reached for the "${result.plan}" plan (${result.limit} invoices). Contact ${contact} for a custom plan.`;
+
+    return reply.status(429).send({
+      success: false,
+      error: 'Quota exceeded',
+      message,
+    });
   }
 
   request.apiKeyPlan = result.plan;
