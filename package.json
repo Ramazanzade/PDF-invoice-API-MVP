@@ -14,9 +14,9 @@
         "dotenv": "^16.4.5",
         "fastify": "^5.1.0",
         "handlebars": "^4.7.8",
+        "nodemailer": "^10.0.12",
         "pg": "^8.23.0",
         "playwright": "1.48.2",
-        "resend": "^6.30.0",
         "zod": "^3.23.8"
     },
     "logo_base64": null

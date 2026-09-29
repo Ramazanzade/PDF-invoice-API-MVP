@@ -1,17 +1,34 @@
 import crypto from 'crypto';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 import { pool } from '../db.js';
-
-if (!process.env.RESEND_API_KEY) {
-  throw new Error('RESEND_API_KEY environment variable is required');
-}
 
 if (!process.env.APP_URL) {
   throw new Error('APP_URL environment variable is required');
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+  throw new Error('SMTP_HOST, SMTP_USER and SMTP_PASS environment variables are required');
+}
+
 const APP_URL = process.env.APP_URL;
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 587,
+  secure: false, 
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
+
+transporter.verify((err) => {
+  if (err) {
+    console.error('SMTP connection error:', err.message);
+  } else {
+    console.log('SMTP server ready to send emails');
+  }
+});
 
 export async function startVerification(email) {
   const token = crypto.randomBytes(24).toString('hex');
@@ -27,27 +44,26 @@ export async function startVerification(email) {
 
   console.log('Sending verification email to:', email);
 
-  const { data, error } = await resend.emails.send({
-    from: 'PDF Invoice API <onboarding@resend.dev>',
-    to: email,
-    subject: 'Confirm your email to get your API key',
-    html: `
-      <p>Click to confirm and receive your API key:</p>
-      <p>
-        <a href="${verifyUrl}">${verifyUrl}</a>
-      </p>
-      <p>This link expires in 30 minutes.</p>
-    `,
-  });
+  try {
+    const info = await transporter.sendMail({
+      from: `"PDF Invoice API" <${process.env.SMTP_USER}>`,
+      to: email,
+      subject: 'Confirm your email to get your API key',
+      html: `
+        <p>Click to confirm and receive your API key:</p>
+        <p>
+          <a href="${verifyUrl}">${verifyUrl}</a>
+        </p>
+        <p>This link expires in 30 minutes.</p>
+      `,
+    });
 
-  if (error) {
-    console.error('RESEND ERROR:', error);
-    throw new Error(`Failed to send verification email: ${error.message}`);
+    console.log('EMAIL SENT:', info.messageId);
+    return info;
+  } catch (err) {
+    console.error('EMAIL SEND ERROR:', err);
+    throw new Error(`Failed to send verification email: ${err.message}`);
   }
-
-  console.log('RESEND SUCCESS:', data);
-
-  return data;
 }
 
 export async function completeVerification(token) {
