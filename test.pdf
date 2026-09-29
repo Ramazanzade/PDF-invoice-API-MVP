@@ -1,12 +1,17 @@
 HTTP/1.1 403 Forbidden
-vary: Origin
-x-ratelimit-limit: 10
-x-ratelimit-remaining: 8
-x-ratelimit-reset: 36
-content-type: application/json; charset=utf-8
-content-length: 65
-Date: Tue, 29 Sep 2026 04:14:22 GMT
+Date: Tue, 29 Sep 2026 04:19:25 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
 Connection: keep-alive
-Keep-Alive: timeout=72
+rndr-id: d09e547a-3e2a-4907
+Server: cloudflare
+vary: Origin
+vary: Accept-Encoding
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-ratelimit-reset: 60
+x-render-origin-server: Render
+cf-cache-status: DYNAMIC
+CF-RAY: a42830844c62adfd-GYD
 
 {"success":false,"error":"Forbidden","message":"Invalid API key"}

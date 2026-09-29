@@ -12,7 +12,7 @@ if (!email) {
 }
 
 const key = await createApiKey({ ownerEmail: email, plan, monthlyLimit: limit });
-console.log('Yeni API key (bir defe gosterilir, saxla):');
+console.log('New API key (displayed once, save):');
 console.log(key);
 await pool.end();
 process.exit(0);
