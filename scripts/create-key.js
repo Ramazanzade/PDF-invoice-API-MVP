@@ -4,7 +4,7 @@ import { pool } from '../src/db.js';
 
 const email = process.argv[2];
 const plan = process.argv[3] || 'free';
-const limit = Number(process.argv[4]) || 100;
+const limit = Number(process.argv[4]) || 50;
 
 if (!email) {
   console.error('Usage: node scripts/create-key.js email@example.com [plan] [limit]');
