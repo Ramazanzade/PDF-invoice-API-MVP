@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import { pool } from '../db.js';
+import { PLANS } from '../config/plans.js';
 
 function hashKey(key) {
   return crypto.createHash('sha256').update(key).digest('hex');
@@ -9,10 +10,15 @@ export function generateApiKey() {
   return 'inv_live_' + crypto.randomBytes(24).toString('hex');
 }
 
-export async function createApiKey({ ownerEmail, plan = 'free', monthlyLimit = 100 }) {
+export async function createApiKey({ ownerEmail, plan = 'free' }) {
+  if (!(plan in PLANS)) {
+    throw new Error(`Unknown plan "${plan}". Available: ${Object.keys(PLANS).join(', ')}`);
+  }
+
   const raw = generateApiKey();
   const keyHash = hashKey(raw);
   const keyPrefix = raw.slice(0, 16);
+  const monthlyLimit = PLANS[plan].limit;
 
   await pool.query(
     `INSERT INTO api_keys (key_hash, key_prefix, owner_email, plan, monthly_limit)
@@ -44,7 +50,17 @@ export async function verifyApiKey(rawKey) {
   const currentCount = usageRows[0].count;
 
   if (currentCount > keyRecord.monthly_limit) {
-    return { exceeded: true };
+    const nextPlan = Object.entries(PLANS)
+      .filter(([, p]) => p.limit > keyRecord.monthly_limit)
+      .sort((a, b) => a[1].limit - b[1].limit)[0];
+
+    return {
+      exceeded: true,
+      plan: keyRecord.plan,
+      limit: keyRecord.monthly_limit,
+      nextPlan: nextPlan ? nextPlan[0] : null,
+      nextPrice: nextPlan ? nextPlan[1].price : null,
+    };
   }
 
   pool.query(`UPDATE api_keys SET last_used_at = now() WHERE id = $1`, [keyRecord.id]).catch(() => {});

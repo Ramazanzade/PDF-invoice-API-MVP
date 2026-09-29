@@ -244,20 +244,29 @@ All errors return JSON with this shape:
 ## Rate limits
 
 - **Per-minute:** 10 requests per IP on `/v1/invoices` (returns `429` with a `Retry-After` header)
-- **Monthly quota:** set per API key (default: 100 invoices/month on the free tier). Exceeding it returns `429`.
+- **Monthly quota:** set per API key (default: 50 invoices/month on the free tier). Exceeding it returns `429`.
 
 ---
 
-## Notes & limitations (current version)
+## Pricing
 
-- Max request body size: 512KB
-- Max 100 line items per invoice
-- Max 30 custom labels
-- Logo must be PNG or JPEG, embedded as base64 (max ~150KB)
-- The free hosting tier may take 30–60 seconds to respond to the first request after a period of inactivity (cold start)
+| Plan     | Monthly limit | Price     |
+|----------|---------------|-----------|
+| Free     | 50 invoices   | $0        |
+| Starter  | 500 invoices  | $5 / month |
+| Growth   | 1 000 invoices| $15 / month |
+| Pro      | 5 000 invoices| $25 / month |
 
+
+### How to upgrade
+
+1. Contact us and tell which plan you want.
+2. Pay via **Payoneer** or **Wise** (details will be sent in the reply).
+3. After payment is confirmed, your plan is upgraded within a few hours and the new limit becomes active immediately.
+
+There is currently no automatic payment gateway. All upgrades are handled manually.
 ---
 
 ## Support
 
-Questions or issues: [your email/contact here]
+Questions or issues: [your ramazanov570633@gmail.com]

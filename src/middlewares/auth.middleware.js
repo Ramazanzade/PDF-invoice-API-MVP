@@ -29,8 +29,8 @@ export async function authMiddleware(request, reply) {
     success: false,
     error: 'Quota exceeded',
     message: nextPlan
-      ? `Monthly limit reached for the "${result.plan}" plan. Upgrade to "${nextPlan}" ($${PLANS[nextPlan].price}/mo) — contact [SƏNİN_EMAILIN].`
-      : `Monthly limit reached for the "${result.plan}" plan. Contact [SƏNİN_EMAILIN] for a custom plan.`,
+      ? `Monthly limit reached for the "${result.plan}" plan. Upgrade to "${nextPlan}" ($${PLANS[nextPlan].price}/mo) — contact [ramazanov570633@gmail.com].`
+      : `Monthly limit reached for the "${result.plan}" plan. Contact [ramazanov570633@gmail.com] for a custom plan.`,
   });
   }
 
