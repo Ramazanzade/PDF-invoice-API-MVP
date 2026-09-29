@@ -1,51 +1,50 @@
 {
-  "language": "tr",
-  "currency": "tr",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "Bakü şehri, Nizami Caddesi 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "Bakü şehri, 28 Mayıs Caddesi 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "Web sitesi geliştirme",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "Hosting hizmeti (1 yıl)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "Teknik destek (3 ay)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "Ödeme 7 iş günü içerisinde banka havalesi yoluyla yapılmalıdır.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "Fatura",
-    "from": "Satıcı",
-    "bill_to": "Alıcı",
-    "tax": "KDV",
-    "thank_you": "İş birliğiniz için teşekkür ederiz!",
-    "rayon": "Lerik",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "Nizam Ramazanzade"
-  }
+    "language":  "tr",
+    "currency":  "tr",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "Bakü şehri, Nizami Caddesi 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "Bakü şehri, 28 Mayıs Caddesi 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "Web sitesi geliştirme",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "Hosting hizmeti (1 yıl)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "Teknik destek (3 ay)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "Ödeme 7 iş günü içerisinde banka havalesi yoluyla yapılmalıdır.",
+    "labels":  {
+                   "invoice":  "Fatura",
+                   "from":  "Satıcı",
+                   "bill_to":  "Alıcı",
+                   "tax":  "KDV",
+                   "thank_you":  "İş birliğiniz için teşekkür ederiz!",
+                   "rayon":  "Lerik",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "Nizam Ramazanzade"
+               }
 }

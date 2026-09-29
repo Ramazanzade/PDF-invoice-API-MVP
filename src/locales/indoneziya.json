@@ -1,51 +1,50 @@
 {
-  "language": "id",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "Baku, Jalan Nizami 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "Baku, Jalan 28 Mei 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "Pengembangan situs web",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "Layanan hosting (1 tahun)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "Dukungan teknis (3 bulan)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "Pembayaran harus dilakukan melalui transfer bank dalam waktu 7 hari kerja.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "Faktur",
-    "from": "Penjual",
-    "bill_to": "Pembeli",
-    "tax": "PPN",
-    "thank_you": "Terima kasih atas kerja sama Anda!",
-    "rayon": "Lankaran",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "Penanggung jawab: Nizam Ramazanzade"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "Baku, Jalan Nizami 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "Baku, Jalan 28 Mei 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "Pengembangan situs web",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "Layanan hosting (1 tahun)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "Dukungan teknis (3 bulan)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "Pembayaran harus dilakukan melalui transfer bank dalam waktu 7 hari kerja.",
+    "labels":  {
+                   "invoice":  "Faktur",
+                   "from":  "Penjual",
+                   "bill_to":  "Pembeli",
+                   "tax":  "PPN",
+                   "thank_you":  "Terima kasih atas kerja sama Anda!",
+                   "rayon":  "Lankaran",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "Penanggung jawab: Nizam Ramazanzade"
+               }
 }

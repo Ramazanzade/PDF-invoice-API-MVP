@@ -1,51 +1,50 @@
 {
-  "language": "pt",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "Baku, Rua Nizami 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "Baku, Rua 28 de Maio 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "Desenvolvimento de website",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "Serviço de hospedagem (1 ano)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "Suporte técnico (3 meses)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "O pagamento deve ser efetuado por transferência bancária no prazo de 7 dias úteis.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "Fatura",
-    "from": "Vendedor",
-    "bill_to": "Comprador",
-    "tax": "IVA",
-    "thank_you": "Obrigado pela sua colaboração!",
-    "rayon": "Lankaran",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "Pessoa responsável: Nizam Ramazanzade"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "Baku, Rua Nizami 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "Baku, Rua 28 de Maio 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "Desenvolvimento de website",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "Serviço de hospedagem (1 ano)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "Suporte técnico (3 meses)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "O pagamento deve ser efetuado por transferência bancária no prazo de 7 dias úteis.",
+    "labels":  {
+                   "invoice":  "Fatura",
+                   "from":  "Vendedor",
+                   "bill_to":  "Comprador",
+                   "tax":  "IVA",
+                   "thank_you":  "Obrigado pela sua colaboração!",
+                   "rayon":  "Lankaran",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "Pessoa responsável: Nizam Ramazanzade"
+               }
 }

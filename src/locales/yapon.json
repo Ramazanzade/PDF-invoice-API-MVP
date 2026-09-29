@@ -1,51 +1,50 @@
 {
-  "language": "ja",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "バクー市ニザミ通り12番地",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "バクー市5月28日通り45番地",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "ウェブサイト開発",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "ホスティングサービス（1年間）",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "テクニカルサポート（3か月）",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "お支払いは7営業日以内に銀行振込でお願いいたします。",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "請求書",
-    "from": "販売者",
-    "bill_to": "購入者",
-    "tax": "消費税",
-    "thank_you": "ご協力ありがとうございます！",
-    "rayon": "ランカラン",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "担当者：ニザム・ラマザンザデ"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "バクー市ニザミ通り12番地",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "バクー市5月28日通り45番地",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "ウェブサイト開発",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "ホスティングサービス（1年間）",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "テクニカルサポート（3か月）",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "お支払いは7営業日以内に銀行振込でお願いいたします。",
+    "labels":  {
+                   "invoice":  "請求書",
+                   "from":  "販売者",
+                   "bill_to":  "購入者",
+                   "tax":  "消費税",
+                   "thank_you":  "ご協力ありがとうございます！",
+                   "rayon":  "ランカラン",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "担当者：ニザム・ラマザンザデ"
+               }
 }

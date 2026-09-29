@@ -1,51 +1,50 @@
 {
-  "language": "nl",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "Baku, Nizami-straat 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "Baku, 28 Mei-straat 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "Ontwikkeling van een website",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "Hostingdienst (1 jaar)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "Technische ondersteuning (3 maanden)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "De betaling moet binnen 7 werkdagen via bankoverschrijving worden uitgevoerd.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "Factuur",
-    "from": "Verkoper",
-    "bill_to": "Koper",
-    "tax": "BTW",
-    "thank_you": "Bedankt voor uw samenwerking!",
-    "rayon": "Lankaran",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "Verantwoordelijke: Nizam Ramazanzade"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "Baku, Nizami-straat 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "Baku, 28 Mei-straat 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "Ontwikkeling van een website",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "Hostingdienst (1 jaar)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "Technische ondersteuning (3 maanden)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "De betaling moet binnen 7 werkdagen via bankoverschrijving worden uitgevoerd.",
+    "labels":  {
+                   "invoice":  "Factuur",
+                   "from":  "Verkoper",
+                   "bill_to":  "Koper",
+                   "tax":  "BTW",
+                   "thank_you":  "Bedankt voor uw samenwerking!",
+                   "rayon":  "Lankaran",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "Verantwoordelijke: Nizam Ramazanzade"
+               }
 }

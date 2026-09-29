@@ -1,51 +1,50 @@
 {
-  "language": "zh",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "巴库市尼扎米街12号",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "巴库市5月28日街45号",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "网站开发",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "托管服务（1年）",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "技术支持（3个月）",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "请在7个工作日内通过银行转账完成付款。",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "发票",
-    "from": "卖方",
-    "bill_to": "买方",
-    "tax": "增值税",
-    "thank_you": "感谢您的合作！",
-    "rayon": "连科兰",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "负责人：尼扎姆·拉马赞扎德"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "巴库市尼扎米街12号",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "巴库市5月28日街45号",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "网站开发",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "托管服务（1年）",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "技术支持（3个月）",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "请在7个工作日内通过银行转账完成付款。",
+    "labels":  {
+                   "invoice":  "发票",
+                   "from":  "卖方",
+                   "bill_to":  "买方",
+                   "tax":  "增值税",
+                   "thank_you":  "感谢您的合作！",
+                   "rayon":  "连科兰",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "负责人：尼扎姆·拉马赞扎德"
+               }
 }

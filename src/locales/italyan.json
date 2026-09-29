@@ -1,51 +1,50 @@
 {
-  "language": "it",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "Baku, via Nizami 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "Baku, via 28 Maggio 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "Sviluppo di un sito web",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "Servizio di hosting (1 anno)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "Supporto tecnico (3 mesi)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "Il pagamento deve essere effettuato tramite bonifico bancario entro 7 giorni lavorativi.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "Fattura",
-    "from": "Venditore",
-    "bill_to": "Acquirente",
-    "tax": "IVA",
-    "thank_you": "Grazie per la collaborazione!",
-    "rayon": "Lankaran",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "Persona responsabile: Nizam Ramazanzade"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "Baku, via Nizami 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "Baku, via 28 Maggio 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "Sviluppo di un sito web",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "Servizio di hosting (1 anno)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "Supporto tecnico (3 mesi)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "Il pagamento deve essere effettuato tramite bonifico bancario entro 7 giorni lavorativi.",
+    "labels":  {
+                   "invoice":  "Fattura",
+                   "from":  "Venditore",
+                   "bill_to":  "Acquirente",
+                   "tax":  "IVA",
+                   "thank_you":  "Grazie per la collaborazione!",
+                   "rayon":  "Lankaran",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "Persona responsabile: Nizam Ramazanzade"
+               }
 }

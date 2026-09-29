@@ -1,51 +1,50 @@
 {
-  "language": "ar",
-  "currency": "ar",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "مدينة باكو، شارع نظامي 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "مدينة باكو، شارع 28 مايو 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "تطوير موقع إلكتروني",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "خدمة الاستضافة (سنة واحدة)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "الدعم الفني (3 أشهر)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "يجب إجراء الدفع عن طريق التحويل المصرفي خلال 7 أيام عمل.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "فاتورة",
-    "from": "البائع",
-    "bill_to": "المشتري",
-    "tax": "ضريبة القيمة المضافة",
-    "thank_you": "شكراً لتعاونكم!",
-    "rayon": "لانكاران",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "الشخص المسؤول: نظام رامازانزاده"
-  }
+    "language":  "ar",
+    "currency":  "ar",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "مدينة باكو، شارع نظامي 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "مدينة باكو، شارع 28 مايو 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "تطوير موقع إلكتروني",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "خدمة الاستضافة (سنة واحدة)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "الدعم الفني (3 أشهر)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "يجب إجراء الدفع عن طريق التحويل المصرفي خلال 7 أيام عمل.",
+    "labels":  {
+                   "invoice":  "فاتورة",
+                   "from":  "البائع",
+                   "bill_to":  "المشتري",
+                   "tax":  "ضريبة القيمة المضافة",
+                   "thank_you":  "شكراً لتعاونكم!",
+                   "rayon":  "لانكاران",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "الشخص المسؤول: نظام رامازانزاده"
+               }
 }

@@ -1,51 +1,50 @@
 {
-  "language": "ko",
-  "currency": "AZN",
-  "invoice_number": "INV-2026-001",
-  "issue_date": "2026-09-28",
-  "due_date": "2026-10-05",
-  "seller": {
-    "name": "ABC MMC",
-    "address": "바쿠시 니자미 거리 12",
-    "email": "info@abc.az",
-    "phone": "+994 50 123 45 67",
-    "tax_id": "1234567891"
-  },
-  "buyer": {
-    "name": "XYZ MMC",
-    "address": "바쿠시 5월 28일 거리 45",
-    "email": "billing@xyz.az",
-    "phone": "+994 55 987 65 43",
-    "tax_id": "9876543210"
-  },
-  "items": [
-    {
-      "description": "웹사이트 개발",
-      "quantity": 1,
-      "unit_price": 1200
-    },
-    {
-      "description": "호스팅 서비스 (1년)",
-      "quantity": 1,
-      "unit_price": 150
-    },
-    {
-      "description": "기술 지원 (3개월)",
-      "quantity": 1,
-      "unit_price": 300
-    }
-  ],
-  "tax_rate": 18,
-  "notes": "결제는 영업일 기준 7일 이내에 은행 송금으로 진행해 주시기 바랍니다.",
-  "logo_url": "https://example.com/logo.png",
-  "labels": {
-    "invoice": "청구서",
-    "from": "판매자",
-    "bill_to": "구매자",
-    "tax": "부가가치세",
-    "thank_you": "협조해 주셔서 감사합니다!",
-    "rayon": "랑카란",
-    "müqavilə_no": "45/2026",
-    "məsul_şəxs": "담당자: 니잠 라마잔자데"
-  }
+    "language":  "en",
+    "currency":  "AZN",
+    "invoice_number":  "INV-2026-001",
+    "issue_date":  "2026-09-28",
+    "due_date":  "2026-10-05",
+    "seller":  {
+                   "name":  "ABC MMC",
+                   "address":  "바쿠시 니자미 거리 12",
+                   "email":  "info@abc.az",
+                   "phone":  "+994 50 123 45 67",
+                   "tax_id":  "1234567891"
+               },
+    "buyer":  {
+                  "name":  "XYZ MMC",
+                  "address":  "바쿠시 5월 28일 거리 45",
+                  "email":  "billing@xyz.az",
+                  "phone":  "+994 55 987 65 43",
+                  "tax_id":  "9876543210"
+              },
+    "items":  [
+                  {
+                      "description":  "웹사이트 개발",
+                      "quantity":  1,
+                      "unit_price":  1200
+                  },
+                  {
+                      "description":  "호스팅 서비스 (1년)",
+                      "quantity":  1,
+                      "unit_price":  150
+                  },
+                  {
+                      "description":  "기술 지원 (3개월)",
+                      "quantity":  1,
+                      "unit_price":  300
+                  }
+              ],
+    "tax_rate":  18,
+    "notes":  "결제는 영업일 기준 7일 이내에 은행 송금으로 진행해 주시기 바랍니다.",
+    "labels":  {
+                   "invoice":  "청구서",
+                   "from":  "판매자",
+                   "bill_to":  "구매자",
+                   "tax":  "부가가치세",
+                   "thank_you":  "협조해 주셔서 감사합니다!",
+                   "rayon":  "랑카란",
+                   "müqavilə_no":  "45/2026",
+                   "məsul_şəxs":  "담당자: 니잠 라마잔자데"
+               }
 }
