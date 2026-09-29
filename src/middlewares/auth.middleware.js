@@ -1,4 +1,4 @@
-import { config } from '../config/index.js';
+import { verifyApiKey } from '../services/apikey.service.js';
 
 export async function authMiddleware(request, reply) {
   const authHeader = request.headers.authorization;
@@ -11,9 +11,10 @@ export async function authMiddleware(request, reply) {
     });
   }
 
-  const apiKey = authHeader.slice(7); 
+  const apiKey = authHeader.slice(7).trim();
+  const result = await verifyApiKey(apiKey);
 
-  if (apiKey !== config.apiKey) {
+  if (!result) {
     return reply.status(403).send({
       success: false,
       error: 'Forbidden',
@@ -21,4 +22,13 @@ export async function authMiddleware(request, reply) {
     });
   }
 
+  if (result.exceeded) {
+    return reply.status(429).send({
+      success: false,
+      error: 'Quota exceeded',
+      message: 'Monthly invoice quota exceeded for this API key',
+    });
+  }
+
+  request.apiKeyPlan = result.plan;
 }
