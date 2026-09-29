@@ -4,13 +4,14 @@ import invoiceRoutes from './routes/invoices.route.js';
 import { getTranslations, getSupportedLanguages, isRTL } from './services/i18n.service.js';
 import healthRoutes from './routes/health.js';
 import rateLimit from '@fastify/rate-limit';
+import signupRoutes from './routes/signup.route.js';
 
 const app = Fastify({
   logger: true,
    trustProxy: true, 
   bodyLimit: 512 * 1024, 
 });
-
+await app.register(signupRoutes);
 await app.register(cors, {
   origin: true,
 });
