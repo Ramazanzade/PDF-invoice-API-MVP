@@ -2,12 +2,19 @@ import crypto from 'crypto';
 import { Resend } from 'resend';
 import { pool } from '../db.js';
 
+if (!process.env.RESEND_API_KEY) {
+  throw new Error('RESEND_API_KEY environment variable is required');
+}
+if (!process.env.APP_URL) {
+  throw new Error('APP_URL environment variable is required');
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
-const APP_URL = process.env.APP_URL; 
+const APP_URL = process.env.APP_URL;
 
 export async function startVerification(email) {
   const token = crypto.randomBytes(24).toString('hex');
-  const expiresAt = new Date(Date.now() + 30 * 60 * 1000); 
+  const expiresAt = new Date(Date.now() + 30 * 60 * 1000);
 
   await pool.query(
     `INSERT INTO email_verifications (email, token, expires_at) VALUES ($1, $2, $3)`,
