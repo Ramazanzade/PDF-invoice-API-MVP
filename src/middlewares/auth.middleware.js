@@ -1,4 +1,5 @@
 import { verifyApiKey } from '../services/apikey.service.js';
+import { PLANS } from '../config/plans.js';
 
 export async function authMiddleware(request, reply) {
   const authHeader = request.headers.authorization;
@@ -23,11 +24,14 @@ export async function authMiddleware(request, reply) {
   }
 
   if (result.exceeded) {
-    return reply.status(429).send({
-      success: false,
-      error: 'Quota exceeded',
-      message: 'Monthly invoice quota exceeded for this API key',
-    });
+  const nextPlan = Object.entries(PLANS).find(([, p]) => p.limit > result.limit)?.[0];
+  return reply.status(429).send({
+    success: false,
+    error: 'Quota exceeded',
+    message: nextPlan
+      ? `Monthly limit reached for the "${result.plan}" plan. Upgrade to "${nextPlan}" ($${PLANS[nextPlan].price}/mo) — contact [SƏNİN_EMAILIN].`
+      : `Monthly limit reached for the "${result.plan}" plan. Contact [SƏNİN_EMAILIN] for a custom plan.`,
+  });
   }
 
   request.apiKeyPlan = result.plan;
