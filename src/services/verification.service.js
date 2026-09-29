@@ -49,3 +49,27 @@ export async function startVerification(email) {
 
   return data;
 }
+
+export async function completeVerification(token) {
+  const { rows } = await pool.query(
+    `SELECT *
+     FROM email_verifications
+     WHERE token = $1
+       AND verified = false
+       AND expires_at > now()`,
+    [token]
+  );
+
+  if (rows.length === 0) {
+    return null;
+  }
+
+  await pool.query(
+    `UPDATE email_verifications
+     SET verified = true
+     WHERE token = $1`,
+    [token]
+  );
+
+  return rows[0].email;
+}
